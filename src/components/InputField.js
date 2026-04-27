@@ -1,6 +1,6 @@
 import { Text, TextInput, View } from "react-native";
 
-import { cn, COMPONENT_VARIANTS } from "../constants";
+import { cn, COLORS, COMPONENT_VARIANTS, TYPOGRAPHY } from "../constants";
 
 export default function InputField({
   label,
@@ -14,7 +14,7 @@ export default function InputField({
   return (
     <View className="mb-4">
       {label ? (
-        <Text className="mb-2 text-sm font-semibold text-zmen-text">
+        <Text className={cn("mb-2 font-semibold", TYPOGRAPHY.caption)}>
           {label}
         </Text>
       ) : null}
@@ -25,7 +25,7 @@ export default function InputField({
           className,
         )}
         placeholder={placeholder}
-        placeholderTextColor="#9AA1B6"
+        placeholderTextColor={COLORS.muted}
         value={value}
         onChangeText={onChangeText}
         keyboardType={keyboardType}

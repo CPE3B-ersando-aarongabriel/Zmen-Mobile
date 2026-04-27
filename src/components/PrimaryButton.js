@@ -17,12 +17,15 @@ export default function PrimaryButton({
 
   return (
     <Pressable
-      className={cn(
-        COMPONENT_VARIANTS.button.base,
-        variantClass,
-        disabled ? "opacity-60" : "",
-        className,
-      )}
+      className={({ pressed }) =>
+        cn(
+          COMPONENT_VARIANTS.button.base,
+          variantClass,
+          pressed && !disabled ? "scale-[0.99] opacity-90" : "",
+          disabled ? "opacity-60" : "",
+          className,
+        )
+      }
       onPress={onPress}
       disabled={disabled || loading}
     >

@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+import { COLORS } from "../../constants";
 import PhStripScanScreen from "../../screens/pro/PhStripScanScreen";
 import ProResultsScreen from "../../screens/pro/ProResultsScreen";
 import SemenScanScreen from "../../screens/pro/SemenScanScreen";
@@ -12,7 +13,7 @@ export default function ProFlowNavigator() {
     <Stack.Navigator
       initialRouteName="PhStripScan"
       screenOptions={{
-        headerTintColor: "#080890",
+        headerTintColor: COLORS.primary,
         animation: "slide_from_right",
       }}
     >

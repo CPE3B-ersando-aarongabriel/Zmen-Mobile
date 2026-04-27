@@ -41,6 +41,7 @@ export default function ProfileMainScreen({ navigation }) {
         {MENU_ITEMS.map((item) => (
           <Pressable
             key={item.key}
+            className={({ pressed }) => (pressed ? "opacity-90" : "")}
             onPress={() => navigation.navigate(item.key)}
           >
             <Card>

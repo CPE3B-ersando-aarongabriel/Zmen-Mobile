@@ -3,7 +3,7 @@ import { ScrollView, Text, View } from "react-native";
 import Card from "../components/Card";
 import PrimaryButton from "../components/PrimaryButton";
 import SectionHeader from "../components/SectionHeader";
-import { TYPOGRAPHY } from "../constants";
+import { cn, TYPOGRAPHY } from "../constants";
 
 const FLOW_OPTIONS = [
   {
@@ -35,8 +35,8 @@ export default function HomeScreen({ navigation }) {
       className="flex-1 bg-zmen-background"
       contentContainerClassName="px-5 pb-28 pt-6"
     >
-      <Text className={TYPOGRAPHY.display}>ZMEN Health Screening</Text>
-      <Text className="mt-2 text-base leading-6 text-zmen-text/75">
+      <Text className={TYPOGRAPHY.H1}>ZMEN Health Screening</Text>
+      <Text className={TYPOGRAPHY.body}>
         Guided, clinical-style journeys designed for trust, clarity, and fast
         action.
       </Text>
@@ -53,7 +53,7 @@ export default function HomeScreen({ navigation }) {
               <Text className="text-xl font-bold text-zmen-primary">
                 {item.title}
               </Text>
-              <Text className="mt-2 text-sm leading-6 text-zmen-text/80">
+              <Text className={cn("mt-2", TYPOGRAPHY.caption)}>
                 {item.subtitle}
               </Text>
               <PrimaryButton

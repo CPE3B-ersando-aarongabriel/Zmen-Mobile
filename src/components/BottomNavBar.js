@@ -2,6 +2,8 @@ import { Ionicons } from "@expo/vector-icons";
 import { Pressable, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { COLORS } from "../constants";
+
 const ROUTE_ICON_MAP = {
   Home: "home",
   History: "time",
@@ -36,13 +38,15 @@ export default function BottomNavBar({ state, descriptors, navigation }) {
           return (
             <Pressable
               key={route.key}
-              className="flex-1 items-center justify-center rounded-2xl py-2"
+              className={({ pressed }) =>
+                `flex-1 items-center justify-center rounded-2xl py-2 ${pressed ? "opacity-85" : ""}`
+              }
               onPress={onPress}
             >
               <Ionicons
                 name={iconName}
                 size={20}
-                color={isFocused ? "#080890" : "#8B92A7"}
+                color={isFocused ? COLORS.primary : COLORS.muted}
               />
               <Text
                 className={`mt-1 text-xs font-semibold ${

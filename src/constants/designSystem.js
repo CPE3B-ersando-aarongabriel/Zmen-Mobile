@@ -7,23 +7,23 @@ export const cn = (...parts) => parts.filter(Boolean).join(" ");
 
 export const COMPONENT_VARIANTS = {
   button: {
-    base: "rounded-2xl px-5 py-4 items-center justify-center",
-    primary: `bg-zmen-primary ${SHADOWS.elevated}`,
-    secondary: "bg-zmen-secondary",
-    ghost: "bg-zmen-white border border-zmen-muted/40",
+    base: "min-h-12 rounded-2xl px-5 py-3.5 items-center justify-center",
+    primary: `bg-zmen-primary border border-zmen-primary ${SHADOWS.elevated}`,
+    secondary: "bg-zmen-secondary border border-zmen-secondary",
+    ghost: "bg-zmen-white border border-zmen-muted",
   },
   card: {
-    base: `rounded-3xl bg-zmen-white p-5 ${SHADOWS.card}`,
-    elevated: `rounded-3xl bg-zmen-white p-5 ${SHADOWS.elevated}`,
+    base: `rounded-2xl border border-zmen-muted/55 bg-zmen-white p-4 ${SHADOWS.card}`,
+    elevated: `rounded-3xl border border-zmen-muted/55 bg-zmen-white p-5 ${SHADOWS.elevated}`,
   },
   input: {
-    base: "rounded-2xl border border-zmen-muted/40 bg-zmen-white px-4 py-3 text-zmen-text",
+    base: "min-h-12 rounded-2xl border border-zmen-muted bg-zmen-white px-4 py-3 text-base text-zmen-text",
     focused: "border-zmen-primary",
   },
   risk: {
-    low: "bg-green-50 border-green-200 text-green-700",
-    medium: "bg-yellow-50 border-yellow-200 text-yellow-700",
-    high: "bg-red-50 border-red-200 text-red-700",
+    low: "bg-zmen-secondary/12 border-zmen-secondary/40 text-zmen-primary",
+    medium: "bg-zmen-secondary/20 border-zmen-secondary/60 text-zmen-primary",
+    high: "bg-zmen-primary/12 border-zmen-primary/35 text-zmen-primary",
   },
 };
 

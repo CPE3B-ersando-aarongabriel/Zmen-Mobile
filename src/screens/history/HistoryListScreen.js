@@ -75,11 +75,13 @@ export default function HistoryListScreen({ navigation }) {
         {FILTERS.map((filter) => (
           <Pressable
             key={filter}
-            className={`rounded-full border px-4 py-2 ${
-              activeFilter === filter
-                ? "border-zmen-primary bg-zmen-primary"
-                : "border-zmen-muted/30 bg-zmen-white"
-            }`}
+            className={({ pressed }) =>
+              `rounded-full border px-4 py-2 ${
+                activeFilter === filter
+                  ? "border-zmen-primary bg-zmen-primary"
+                  : "border-zmen-muted bg-zmen-white"
+              } ${pressed ? "opacity-85" : ""}`
+            }
             onPress={() => setActiveFilter(filter)}
           >
             <Text
@@ -97,6 +99,7 @@ export default function HistoryListScreen({ navigation }) {
         {filteredItems.map((item) => (
           <Pressable
             key={item.id}
+            className={({ pressed }) => (pressed ? "opacity-90" : "")}
             onPress={() => navigation.navigate("HistoryDetail", { item })}
           >
             <Card>

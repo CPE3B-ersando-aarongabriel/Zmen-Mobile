@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useState } from "react";
 import { View } from "react-native";
 
+import { COLORS } from "../constants";
 import FloatingChatButton from "../components/FloatingChatButton";
 import ChatbotNavigator from "./ChatbotNavigator";
 import BottomTabs from "./BottomTabs";
@@ -73,11 +74,11 @@ const navTheme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    background: "#F7F7FC",
-    primary: "#080890",
-    text: "#040404",
-    card: "#FFFFFF",
-    border: "#E4E6F0",
+    background: COLORS.background,
+    primary: COLORS.primary,
+    text: COLORS.text,
+    card: COLORS.white,
+    border: COLORS.muted,
   },
 };
 
@@ -112,7 +113,7 @@ export default function RootNavigator() {
         <Stack.Navigator
           initialRouteName="MainTabs"
           screenOptions={{
-            headerTintColor: "#080890",
+            headerTintColor: COLORS.primary,
             animation: "slide_from_right",
           }}
         >

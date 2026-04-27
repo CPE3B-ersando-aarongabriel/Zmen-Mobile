@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+import { COLORS } from "../../constants";
 import CareOverviewScreen from "../../screens/care/CareOverviewScreen";
 import DoctorsListScreen from "../../screens/care/DoctorsListScreen";
 import EducationalContentScreen from "../../screens/care/EducationalContentScreen";
@@ -13,7 +14,7 @@ export default function CareFlowNavigator() {
     <Stack.Navigator
       initialRouteName="CareOverview"
       screenOptions={{
-        headerTintColor: "#080890",
+        headerTintColor: COLORS.primary,
         animation: "slide_from_right",
       }}
     >

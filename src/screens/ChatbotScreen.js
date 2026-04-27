@@ -9,6 +9,7 @@ import { useState } from "react";
 
 import InputField from "../components/InputField";
 import PrimaryButton from "../components/PrimaryButton";
+import { TYPOGRAPHY } from "../constants";
 import { useChatbot } from "../hooks/useChatbot";
 
 export default function ChatbotScreen() {
@@ -31,10 +32,8 @@ export default function ChatbotScreen() {
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
       <View className="flex-1 px-5 pb-6 pt-4">
-        <Text className="text-2xl font-bold text-zmen-primary">
-          ZMEN Assistant
-        </Text>
-        <Text className="mt-1 text-sm text-zmen-text/70">
+        <Text className={TYPOGRAPHY.H2}>ZMEN Assistant</Text>
+        <Text className={TYPOGRAPHY.caption}>
           Conversational support for URO, PRO, and CARE workflows.
         </Text>
 
@@ -50,8 +49,8 @@ export default function ChatbotScreen() {
                 key={message.id}
                 className={`max-w-[88%] rounded-2xl px-4 py-3 ${
                   isUser
-                    ? "self-end bg-zmen-primary"
-                    : "self-start border border-zmen-muted/30 bg-zmen-white"
+                    ? "self-end border border-zmen-primary bg-zmen-primary"
+                    : "self-start border border-zmen-muted/60 bg-zmen-secondary/10"
                 }`}
               >
                 <Text
@@ -64,7 +63,7 @@ export default function ChatbotScreen() {
           })}
 
           {loading ? (
-            <View className="self-start rounded-2xl bg-zmen-secondary/20 px-4 py-2">
+            <View className="self-start rounded-2xl border border-zmen-muted/60 bg-zmen-white px-4 py-2">
               <Text className="text-xs font-semibold text-zmen-primary">
                 Assistant is typing...
               </Text>

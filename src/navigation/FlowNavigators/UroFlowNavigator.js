@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+import { COLORS } from "../../constants";
 import FormSelectionScreen from "../../screens/uro/FormSelectionScreen";
 import ScanUrineScreen from "../../screens/uro/ScanUrineScreen";
 import UroResultsScreen from "../../screens/uro/UroResultsScreen";
@@ -11,7 +12,7 @@ export default function UroFlowNavigator() {
     <Stack.Navigator
       initialRouteName="FormSelection"
       screenOptions={{
-        headerTintColor: "#080890",
+        headerTintColor: COLORS.primary,
         animation: "slide_from_right",
       }}
     >

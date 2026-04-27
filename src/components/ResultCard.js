@@ -16,9 +16,9 @@ export default function ResultCard({
     COMPONENT_VARIANTS.risk[risk] || COMPONENT_VARIANTS.risk.low;
 
   return (
-    <Card elevated className="space-y-4">
+    <Card elevated className="gap-4">
       <View>
-        <Text className={TYPOGRAPHY.subheading}>{title}</Text>
+        <Text className={TYPOGRAPHY.H2}>{title}</Text>
         <View
           className={cn(
             "mt-3 self-start rounded-full border px-3 py-1",
@@ -32,7 +32,7 @@ export default function ResultCard({
       </View>
 
       <Text className="text-4xl font-black text-zmen-primary">{score}</Text>
-      <Text className="text-sm leading-6 text-zmen-text/80">{summary}</Text>
+      <Text className={TYPOGRAPHY.body}>{summary}</Text>
 
       <View className="gap-3">
         {primaryAction ? (
