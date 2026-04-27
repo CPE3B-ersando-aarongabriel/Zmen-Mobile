@@ -18,8 +18,14 @@ export default function EditProfileScreen() {
   };
 
   return (
-    <ScrollView className="flex-1 bg-zmen-background" contentContainerClassName="px-5 pb-10 pt-6">
-      <SectionHeader title="Edit Profile" subtitle="Keep your information updated" />
+    <ScrollView
+      className="flex-1 bg-zmen-background"
+      contentContainerClassName="px-5 pb-10 pt-6"
+    >
+      <SectionHeader
+        title="Edit Profile"
+        subtitle="Keep your information updated"
+      />
 
       <Card elevated>
         <InputField

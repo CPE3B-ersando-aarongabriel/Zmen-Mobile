@@ -6,13 +6,22 @@ import SectionHeader from "../../components/SectionHeader";
 
 export default function CareOverviewScreen({ navigation }) {
   return (
-    <ScrollView className="flex-1 bg-zmen-background" contentContainerClassName="px-5 pb-10 pt-6">
-      <SectionHeader title="ZMEN CARE" subtitle="Recovery, education, and follow-up support" />
+    <ScrollView
+      className="flex-1 bg-zmen-background"
+      contentContainerClassName="px-5 pb-10 pt-6"
+    >
+      <SectionHeader
+        title="ZMEN CARE"
+        subtitle="Recovery, education, and follow-up support"
+      />
 
       <Card elevated>
-        <Text className="text-lg font-bold text-zmen-text">Your care next steps</Text>
+        <Text className="text-lg font-bold text-zmen-text">
+          Your care next steps
+        </Text>
         <Text className="mt-2 text-sm leading-6 text-zmen-text/80">
-          Build confidence with structured education, practical lifestyle tips, and doctor discovery.
+          Build confidence with structured education, practical lifestyle tips,
+          and doctor discovery.
         </Text>
 
         <View className="mt-5 gap-3">

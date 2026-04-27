@@ -30,22 +30,35 @@ export default function ScanUrineScreen({ navigation, route }) {
   };
 
   return (
-    <ScrollView className="flex-1 bg-zmen-background" contentContainerClassName="px-5 pb-10 pt-6">
-      <SectionHeader title="Scan Urine Sample" subtitle="Align strip and capture in stable lighting" />
+    <ScrollView
+      className="flex-1 bg-zmen-background"
+      contentContainerClassName="px-5 pb-10 pt-6"
+    >
+      <SectionHeader
+        title="Scan Urine Sample"
+        subtitle="Align strip and capture in stable lighting"
+      />
 
       <Card elevated>
-        <ScannerFrame label={isScanning ? "Scanner active" : "Align strip inside guide"} />
+        <ScannerFrame
+          label={isScanning ? "Scanner active" : "Align strip inside guide"}
+        />
 
         <View className="mt-4 rounded-2xl bg-zmen-background p-3">
           <Text className="text-sm font-semibold text-zmen-text">
             Permission: {hasPermission ? "Granted" : "Required"}
           </Text>
-          <Text className="mt-1 text-xs text-zmen-muted">Captured: {capturedUri || "No image"}</Text>
+          <Text className="mt-1 text-xs text-zmen-muted">
+            Captured: {capturedUri || "No image"}
+          </Text>
         </View>
 
         <View className="mt-4 gap-3">
           {!hasPermission ? (
-            <PrimaryButton title="Grant Camera Access" onPress={requestPermission} />
+            <PrimaryButton
+              title="Grant Camera Access"
+              onPress={requestPermission}
+            />
           ) : null}
           <PrimaryButton
             title={isScanning ? "Stop Scanner" : "Start Scanner"}
@@ -53,7 +66,11 @@ export default function ScanUrineScreen({ navigation, route }) {
             onPress={isScanning ? stopScanner : startScanner}
             disabled={!hasPermission}
           />
-          <PrimaryButton title="Capture Sample" onPress={mockCapture} disabled={!isScanning} />
+          <PrimaryButton
+            title="Capture Sample"
+            onPress={mockCapture}
+            disabled={!isScanning}
+          />
           <PrimaryButton
             title="Analyze Result"
             variant="ghost"

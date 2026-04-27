@@ -10,7 +10,8 @@ export default function PrimaryButton({
   loading = false,
   className = "",
 }) {
-  const variantClass = COMPONENT_VARIANTS.button[variant] || COMPONENT_VARIANTS.button.primary;
+  const variantClass =
+    COMPONENT_VARIANTS.button[variant] || COMPONENT_VARIANTS.button.primary;
   const labelClass = variant === "ghost" ? "text-zmen-primary" : "text-white";
   const loaderColor = variant === "ghost" ? "#080890" : "#FFFFFF";
 
@@ -28,7 +29,9 @@ export default function PrimaryButton({
       {loading ? (
         <ActivityIndicator color={loaderColor} />
       ) : (
-        <Text className={cn("text-base font-semibold", labelClass)}>{title}</Text>
+        <Text className={cn("text-base font-semibold", labelClass)}>
+          {title}
+        </Text>
       )}
     </Pressable>
   );

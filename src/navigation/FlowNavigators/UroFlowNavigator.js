@@ -15,9 +15,21 @@ export default function UroFlowNavigator() {
         animation: "slide_from_right",
       }}
     >
-      <Stack.Screen name="FormSelection" component={FormSelectionScreen} options={{ title: "URO Intake" }} />
-      <Stack.Screen name="ScanUrine" component={ScanUrineScreen} options={{ title: "Scan Urine" }} />
-      <Stack.Screen name="UroResults" component={UroResultsScreen} options={{ title: "URO Results" }} />
+      <Stack.Screen
+        name="FormSelection"
+        component={FormSelectionScreen}
+        options={{ title: "URO Intake" }}
+      />
+      <Stack.Screen
+        name="ScanUrine"
+        component={ScanUrineScreen}
+        options={{ title: "Scan Urine" }}
+      />
+      <Stack.Screen
+        name="UroResults"
+        component={UroResultsScreen}
+        options={{ title: "URO Results" }}
+      />
     </Stack.Navigator>
   );
 }

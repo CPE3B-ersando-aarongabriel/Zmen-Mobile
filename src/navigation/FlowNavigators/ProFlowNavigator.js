@@ -16,14 +16,26 @@ export default function ProFlowNavigator() {
         animation: "slide_from_right",
       }}
     >
-      <Stack.Screen name="PhStripScan" component={PhStripScanScreen} options={{ title: "pH Strip" }} />
-      <Stack.Screen name="SemenScan" component={SemenScanScreen} options={{ title: "Semen Scan" }} />
+      <Stack.Screen
+        name="PhStripScan"
+        component={PhStripScanScreen}
+        options={{ title: "pH Strip" }}
+      />
+      <Stack.Screen
+        name="SemenScan"
+        component={SemenScanScreen}
+        options={{ title: "Semen Scan" }}
+      />
       <Stack.Screen
         name="ViscosityInput"
         component={ViscosityInputScreen}
         options={{ title: "Viscosity" }}
       />
-      <Stack.Screen name="ProResults" component={ProResultsScreen} options={{ title: "PRO Results" }} />
+      <Stack.Screen
+        name="ProResults"
+        component={ProResultsScreen}
+        options={{ title: "PRO Results" }}
+      />
     </Stack.Navigator>
   );
 }

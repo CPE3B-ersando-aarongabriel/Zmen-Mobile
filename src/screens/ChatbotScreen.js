@@ -1,4 +1,10 @@
-import { KeyboardAvoidingView, Platform, ScrollView, Text, View } from "react-native";
+import {
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  Text,
+  View,
+} from "react-native";
 import { useState } from "react";
 
 import InputField from "../components/InputField";
@@ -25,12 +31,17 @@ export default function ChatbotScreen() {
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
       <View className="flex-1 px-5 pb-6 pt-4">
-        <Text className="text-2xl font-bold text-zmen-primary">ZMEN Assistant</Text>
+        <Text className="text-2xl font-bold text-zmen-primary">
+          ZMEN Assistant
+        </Text>
         <Text className="mt-1 text-sm text-zmen-text/70">
           Conversational support for URO, PRO, and CARE workflows.
         </Text>
 
-        <ScrollView className="mt-4 flex-1" contentContainerClassName="gap-3 pb-4">
+        <ScrollView
+          className="mt-4 flex-1"
+          contentContainerClassName="gap-3 pb-4"
+        >
           {messages.map((message) => {
             const isUser = message.role === "user";
 
@@ -43,7 +54,9 @@ export default function ChatbotScreen() {
                     : "self-start border border-zmen-muted/30 bg-zmen-white"
                 }`}
               >
-                <Text className={`text-sm leading-6 ${isUser ? "text-white" : "text-zmen-text"}`}>
+                <Text
+                  className={`text-sm leading-6 ${isUser ? "text-white" : "text-zmen-text"}`}
+                >
                   {message.content}
                 </Text>
               </View>
@@ -52,7 +65,9 @@ export default function ChatbotScreen() {
 
           {loading ? (
             <View className="self-start rounded-2xl bg-zmen-secondary/20 px-4 py-2">
-              <Text className="text-xs font-semibold text-zmen-primary">Assistant is typing...</Text>
+              <Text className="text-xs font-semibold text-zmen-primary">
+                Assistant is typing...
+              </Text>
             </View>
           ) : null}
         </ScrollView>

@@ -31,10 +31,14 @@ const FLOW_OPTIONS = [
 
 export default function HomeScreen({ navigation }) {
   return (
-    <ScrollView className="flex-1 bg-zmen-background" contentContainerClassName="px-5 pb-28 pt-6">
+    <ScrollView
+      className="flex-1 bg-zmen-background"
+      contentContainerClassName="px-5 pb-28 pt-6"
+    >
       <Text className={TYPOGRAPHY.display}>ZMEN Health Screening</Text>
       <Text className="mt-2 text-base leading-6 text-zmen-text/75">
-        Guided, clinical-style journeys designed for trust, clarity, and fast action.
+        Guided, clinical-style journeys designed for trust, clarity, and fast
+        action.
       </Text>
 
       <View className="mt-7">
@@ -46,12 +50,18 @@ export default function HomeScreen({ navigation }) {
         <View className="gap-4">
           {FLOW_OPTIONS.map((item) => (
             <Card key={item.key} elevated>
-              <Text className="text-xl font-bold text-zmen-primary">{item.title}</Text>
-              <Text className="mt-2 text-sm leading-6 text-zmen-text/80">{item.subtitle}</Text>
+              <Text className="text-xl font-bold text-zmen-primary">
+                {item.title}
+              </Text>
+              <Text className="mt-2 text-sm leading-6 text-zmen-text/80">
+                {item.subtitle}
+              </Text>
               <PrimaryButton
                 title="Start Flow"
                 className="mt-4"
-                onPress={() => navigation.navigate(item.route, { screen: item.screen })}
+                onPress={() =>
+                  navigation.navigate(item.route, { screen: item.screen })
+                }
               />
             </Card>
           ))}
@@ -59,10 +69,17 @@ export default function HomeScreen({ navigation }) {
       </View>
 
       <View className="mt-8">
-        <SectionHeader title="Clinical Progress" subtitle="Your latest summary" />
+        <SectionHeader
+          title="Clinical Progress"
+          subtitle="Your latest summary"
+        />
         <Card>
-          <Text className="text-sm font-semibold text-zmen-muted">Last session</Text>
-          <Text className="mt-2 text-lg font-semibold text-zmen-text">URO - Medium attention</Text>
+          <Text className="text-sm font-semibold text-zmen-muted">
+            Last session
+          </Text>
+          <Text className="mt-2 text-lg font-semibold text-zmen-text">
+            URO - Medium attention
+          </Text>
           <Text className="mt-1 text-sm text-zmen-text/75">
             Repeat in 7 days and review hydration metrics.
           </Text>

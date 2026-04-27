@@ -116,10 +116,26 @@ export default function RootNavigator() {
             animation: "slide_from_right",
           }}
         >
-          <Stack.Screen name="MainTabs" component={BottomTabs} options={{ headerShown: false }} />
-          <Stack.Screen name="UroFlow" component={UroFlowNavigator} options={{ headerShown: false }} />
-          <Stack.Screen name="ProFlow" component={ProFlowNavigator} options={{ headerShown: false }} />
-          <Stack.Screen name="CareFlow" component={CareFlowNavigator} options={{ headerShown: false }} />
+          <Stack.Screen
+            name="MainTabs"
+            component={BottomTabs}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="UroFlow"
+            component={UroFlowNavigator}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="ProFlow"
+            component={ProFlowNavigator}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="CareFlow"
+            component={CareFlowNavigator}
+            options={{ headerShown: false }}
+          />
           <Stack.Screen
             name="ChatbotModal"
             component={ChatbotNavigator}
@@ -127,7 +143,9 @@ export default function RootNavigator() {
           />
         </Stack.Navigator>
 
-        {currentRoute !== "ChatbotModal" ? <FloatingChatButton onPress={openChatbot} /> : null}
+        {currentRoute !== "ChatbotModal" ? (
+          <FloatingChatButton onPress={openChatbot} />
+        ) : null}
       </View>
     </NavigationContainer>
   );

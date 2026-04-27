@@ -17,14 +17,26 @@ export default function CareFlowNavigator() {
         animation: "slide_from_right",
       }}
     >
-      <Stack.Screen name="CareOverview" component={CareOverviewScreen} options={{ title: "ZMEN CARE" }} />
+      <Stack.Screen
+        name="CareOverview"
+        component={CareOverviewScreen}
+        options={{ title: "ZMEN CARE" }}
+      />
       <Stack.Screen
         name="EducationalContent"
         component={EducationalContentScreen}
         options={{ title: "Educational Content" }}
       />
-      <Stack.Screen name="DoctorsList" component={DoctorsListScreen} options={{ title: "Doctors" }} />
-      <Stack.Screen name="Tips" component={TipsScreen} options={{ title: "Daily Tips" }} />
+      <Stack.Screen
+        name="DoctorsList"
+        component={DoctorsListScreen}
+        options={{ title: "Doctors" }}
+      />
+      <Stack.Screen
+        name="Tips"
+        component={TipsScreen}
+        options={{ title: "Daily Tips" }}
+      />
       <Stack.Screen
         name="TestingKitInfo"
         component={TestingKitInfoScreen}

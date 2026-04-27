@@ -13,7 +13,11 @@ export default function InputField({
 }) {
   return (
     <View className="mb-4">
-      {label ? <Text className="mb-2 text-sm font-semibold text-zmen-text">{label}</Text> : null}
+      {label ? (
+        <Text className="mb-2 text-sm font-semibold text-zmen-text">
+          {label}
+        </Text>
+      ) : null}
       <TextInput
         className={cn(
           COMPONENT_VARIANTS.input.base,

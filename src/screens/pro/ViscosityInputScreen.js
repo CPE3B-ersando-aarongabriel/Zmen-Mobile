@@ -25,8 +25,14 @@ export default function ViscosityInputScreen({ navigation }) {
   };
 
   return (
-    <ScrollView className="flex-1 bg-zmen-background" contentContainerClassName="px-5 pb-10 pt-6">
-      <SectionHeader title="Viscosity Input" subtitle="Manual factors for final PRO scoring" />
+    <ScrollView
+      className="flex-1 bg-zmen-background"
+      contentContainerClassName="px-5 pb-10 pt-6"
+    >
+      <SectionHeader
+        title="Viscosity Input"
+        subtitle="Manual factors for final PRO scoring"
+      />
 
       <Card elevated>
         <InputField
@@ -38,7 +44,9 @@ export default function ViscosityInputScreen({ navigation }) {
         />
 
         <View className="mb-5">
-          <Text className="text-sm font-semibold text-zmen-text">Viscosity ({viscosity})</Text>
+          <Text className="text-sm font-semibold text-zmen-text">
+            Viscosity ({viscosity})
+          </Text>
           <Slider
             minimumValue={0}
             maximumValue={100}
@@ -51,7 +59,9 @@ export default function ViscosityInputScreen({ navigation }) {
         </View>
 
         <View className="mb-2">
-          <Text className="text-sm font-semibold text-zmen-text">Motility ({motility})</Text>
+          <Text className="text-sm font-semibold text-zmen-text">
+            Motility ({motility})
+          </Text>
           <Slider
             minimumValue={0}
             maximumValue={100}
@@ -63,7 +73,11 @@ export default function ViscosityInputScreen({ navigation }) {
           />
         </View>
 
-        <PrimaryButton title="Generate PRO Results" className="mt-3" onPress={onContinue} />
+        <PrimaryButton
+          title="Generate PRO Results"
+          className="mt-3"
+          onPress={onContinue}
+        />
       </Card>
     </ScrollView>
   );

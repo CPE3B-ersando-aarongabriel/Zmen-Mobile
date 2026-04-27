@@ -27,7 +27,11 @@ export default function ProfileNavigator() {
         component={PrivacyScreen}
         options={{ headerShown: true, title: "Privacy" }}
       />
-      <Stack.Screen name="Terms" component={TermsScreen} options={{ headerShown: true, title: "Terms" }} />
+      <Stack.Screen
+        name="Terms"
+        component={TermsScreen}
+        options={{ headerShown: true, title: "Terms" }}
+      />
     </Stack.Navigator>
   );
 }

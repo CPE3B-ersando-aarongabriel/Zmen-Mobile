@@ -10,7 +10,9 @@ export default function FloatingChatButton({ onPress }) {
       >
         <Ionicons name="chatbubbles" size={24} color="#FFFFFF" />
       </Pressable>
-      <Text className="mt-2 text-center text-xs font-semibold text-zmen-primary">AI Help</Text>
+      <Text className="mt-2 text-center text-xs font-semibold text-zmen-primary">
+        AI Help
+      </Text>
     </View>
   );
 }

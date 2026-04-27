@@ -15,7 +15,11 @@ export default function HistoryNavigator() {
       }}
     >
       <Stack.Screen name="HistoryList" component={HistoryScreen} />
-      <Stack.Screen name="HistoryDetail" component={HistoryDetailScreen} options={{ headerShown: true }} />
+      <Stack.Screen
+        name="HistoryDetail"
+        component={HistoryDetailScreen}
+        options={{ headerShown: true }}
+      />
     </Stack.Navigator>
   );
 }

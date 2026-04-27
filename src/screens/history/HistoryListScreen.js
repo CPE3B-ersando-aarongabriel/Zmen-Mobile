@@ -6,10 +6,34 @@ import InputField from "../../components/InputField";
 import SectionHeader from "../../components/SectionHeader";
 
 const MOCK_HISTORY = [
-  { id: "1", flow: "URO", title: "Hydration + symptom scan", result: "Medium", date: "2026-04-12" },
-  { id: "2", flow: "PRO", title: "Semen capture analysis", result: "Low", date: "2026-04-10" },
-  { id: "3", flow: "CARE", title: "Care planning review", result: "Info", date: "2026-04-08" },
-  { id: "4", flow: "URO", title: "Urine strip follow-up", result: "High", date: "2026-03-29" },
+  {
+    id: "1",
+    flow: "URO",
+    title: "Hydration + symptom scan",
+    result: "Medium",
+    date: "2026-04-12",
+  },
+  {
+    id: "2",
+    flow: "PRO",
+    title: "Semen capture analysis",
+    result: "Low",
+    date: "2026-04-10",
+  },
+  {
+    id: "3",
+    flow: "CARE",
+    title: "Care planning review",
+    result: "Info",
+    date: "2026-04-08",
+  },
+  {
+    id: "4",
+    flow: "URO",
+    title: "Urine strip follow-up",
+    result: "High",
+    date: "2026-03-29",
+  },
 ];
 
 const FILTERS = ["All", "URO", "PRO", "CARE"];
@@ -31,8 +55,14 @@ export default function HistoryListScreen({ navigation }) {
   }, [activeFilter, search]);
 
   return (
-    <ScrollView className="flex-1 bg-zmen-background" contentContainerClassName="px-5 pb-28 pt-6">
-      <SectionHeader title="History" subtitle="Filter and review all screening events" />
+    <ScrollView
+      className="flex-1 bg-zmen-background"
+      contentContainerClassName="px-5 pb-28 pt-6"
+    >
+      <SectionHeader
+        title="History"
+        subtitle="Filter and review all screening events"
+      />
 
       <InputField
         label="Search"
@@ -70,11 +100,17 @@ export default function HistoryListScreen({ navigation }) {
             onPress={() => navigation.navigate("HistoryDetail", { item })}
           >
             <Card>
-              <Text className="text-xs font-semibold tracking-wide text-zmen-primary">{item.flow}</Text>
-              <Text className="mt-1 text-base font-semibold text-zmen-text">{item.title}</Text>
+              <Text className="text-xs font-semibold tracking-wide text-zmen-primary">
+                {item.flow}
+              </Text>
+              <Text className="mt-1 text-base font-semibold text-zmen-text">
+                {item.title}
+              </Text>
               <View className="mt-2 flex-row items-center justify-between">
                 <Text className="text-sm text-zmen-muted">{item.date}</Text>
-                <Text className="text-sm font-semibold text-zmen-text">{item.result}</Text>
+                <Text className="text-sm font-semibold text-zmen-text">
+                  {item.result}
+                </Text>
               </View>
             </Card>
           </Pressable>

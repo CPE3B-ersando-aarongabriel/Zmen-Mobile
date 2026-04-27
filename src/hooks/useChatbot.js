@@ -5,7 +5,8 @@ import { askAiChatbot } from "../services/aiChatbotService";
 const STARTER_MESSAGE = {
   id: "starter",
   role: "assistant",
-  content: "Hi, I am your ZMEN assistant. Ask me anything about URO, PRO, and CARE flows.",
+  content:
+    "Hi, I am your ZMEN assistant. Ask me anything about URO, PRO, and CARE flows.",
 };
 
 export function useChatbot() {

@@ -11,7 +11,10 @@ export default function UroResultsScreen({ navigation, route }) {
   };
 
   return (
-    <ScrollView className="flex-1 bg-zmen-background" contentContainerClassName="px-5 pb-10 pt-6">
+    <ScrollView
+      className="flex-1 bg-zmen-background"
+      contentContainerClassName="px-5 pb-10 pt-6"
+    >
       <SectionHeader
         title="URO Results"
         subtitle="Risk is classified into Low, Medium, or High state"

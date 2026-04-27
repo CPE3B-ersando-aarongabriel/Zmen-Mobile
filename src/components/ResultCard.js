@@ -12,14 +12,22 @@ export default function ResultCard({
   primaryAction,
   secondaryAction,
 }) {
-  const riskClass = COMPONENT_VARIANTS.risk[risk] || COMPONENT_VARIANTS.risk.low;
+  const riskClass =
+    COMPONENT_VARIANTS.risk[risk] || COMPONENT_VARIANTS.risk.low;
 
   return (
     <Card elevated className="space-y-4">
       <View>
         <Text className={TYPOGRAPHY.subheading}>{title}</Text>
-        <View className={cn("mt-3 self-start rounded-full border px-3 py-1", riskClass)}>
-          <Text className="text-xs font-semibold uppercase tracking-wide">{risk} risk</Text>
+        <View
+          className={cn(
+            "mt-3 self-start rounded-full border px-3 py-1",
+            riskClass,
+          )}
+        >
+          <Text className="text-xs font-semibold uppercase tracking-wide">
+            {risk} risk
+          </Text>
         </View>
       </View>
 
@@ -28,7 +36,10 @@ export default function ResultCard({
 
       <View className="gap-3">
         {primaryAction ? (
-          <PrimaryButton title={primaryAction.label} onPress={primaryAction.onPress} />
+          <PrimaryButton
+            title={primaryAction.label}
+            onPress={primaryAction.onPress}
+          />
         ) : null}
         {secondaryAction ? (
           <PrimaryButton

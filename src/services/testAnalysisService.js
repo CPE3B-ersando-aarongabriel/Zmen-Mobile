@@ -10,7 +10,11 @@ export function classifyRisk(score) {
   return "low";
 }
 
-export function analyzeUroResult({ hydration = 50, frequency = 50, discomfort = 50 }) {
+export function analyzeUroResult({
+  hydration = 50,
+  frequency = 50,
+  discomfort = 50,
+}) {
   const weighted = hydration * 0.3 + frequency * 0.35 + discomfort * 0.35;
   const score = Math.round(weighted);
   const risk = classifyRisk(score);

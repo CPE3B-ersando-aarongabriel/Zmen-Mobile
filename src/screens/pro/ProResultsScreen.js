@@ -11,8 +11,14 @@ export default function ProResultsScreen({ navigation, route }) {
   };
 
   return (
-    <ScrollView className="flex-1 bg-zmen-background" contentContainerClassName="px-5 pb-10 pt-6">
-      <SectionHeader title="PRO Results" subtitle="Reproductive risk support classification" />
+    <ScrollView
+      className="flex-1 bg-zmen-background"
+      contentContainerClassName="px-5 pb-10 pt-6"
+    >
+      <SectionHeader
+        title="PRO Results"
+        subtitle="Reproductive risk support classification"
+      />
 
       <ResultCard
         title="PRO Risk Classification"
@@ -21,7 +27,8 @@ export default function ProResultsScreen({ navigation, route }) {
         summary={result.summary}
         primaryAction={{
           label: "Open Care Guidance",
-          onPress: () => navigation.navigate("CareFlow", { screen: "CareOverview" }),
+          onPress: () =>
+            navigation.navigate("CareFlow", { screen: "CareOverview" }),
         }}
         secondaryAction={{
           label: "Retake PRO Flow",

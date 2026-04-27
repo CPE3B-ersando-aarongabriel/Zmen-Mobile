@@ -12,7 +12,11 @@ export default function ChatbotNavigator() {
         animation: "slide_from_bottom",
       }}
     >
-      <Stack.Screen name="Chatbot" component={ChatbotScreen} options={{ title: "ZMEN Assistant" }} />
+      <Stack.Screen
+        name="Chatbot"
+        component={ChatbotScreen}
+        options={{ title: "ZMEN Assistant" }}
+      />
     </Stack.Navigator>
   );
 }

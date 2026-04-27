@@ -18,7 +18,8 @@ export default function FormSelectionScreen({ navigation }) {
     medication: "",
   });
 
-  const { step, progress, goNext, goBack, isFirstStep, isFinalStep } = useTestFlow(3);
+  const { step, progress, goNext, goBack, isFirstStep, isFinalStep } =
+    useTestFlow(3);
 
   const canContinue = useMemo(() => {
     if (step === 1) {
@@ -32,7 +33,8 @@ export default function FormSelectionScreen({ navigation }) {
     return true;
   }, [form.age, form.symptoms, step]);
 
-  const updateField = (key, value) => setForm((prev) => ({ ...prev, [key]: value }));
+  const updateField = (key, value) =>
+    setForm((prev) => ({ ...prev, [key]: value }));
 
   const onContinue = () => {
     if (!isFinalStep) {
@@ -47,7 +49,10 @@ export default function FormSelectionScreen({ navigation }) {
   };
 
   return (
-    <ScrollView className="flex-1 bg-zmen-background" contentContainerClassName="px-5 pb-10 pt-6">
+    <ScrollView
+      className="flex-1 bg-zmen-background"
+      contentContainerClassName="px-5 pb-10 pt-6"
+    >
       <SectionHeader
         title="ZMEN URO Intake"
         subtitle="Step-by-step health context collection"
@@ -56,14 +61,23 @@ export default function FormSelectionScreen({ navigation }) {
       <Card elevated>
         <View className="mb-4 flex-row items-center justify-between">
           <View>
-            <Text className="text-sm font-semibold text-zmen-text">AI-assisted input</Text>
-            <Text className="text-xs text-zmen-muted">Auto-suggests clearer symptom details</Text>
+            <Text className="text-sm font-semibold text-zmen-text">
+              AI-assisted input
+            </Text>
+            <Text className="text-xs text-zmen-muted">
+              Auto-suggests clearer symptom details
+            </Text>
           </View>
-          <Switch value={isAiAssistEnabled} onValueChange={setIsAiAssistEnabled} />
+          <Switch
+            value={isAiAssistEnabled}
+            onValueChange={setIsAiAssistEnabled}
+          />
         </View>
 
         <View className="mb-4 h-2 overflow-hidden rounded-full bg-zmen-muted/25">
-          <View className={`h-full bg-zmen-primary ${progress >= 34 ? "w-1/3" : "w-1/6"}`} />
+          <View
+            className={`h-full bg-zmen-primary ${progress >= 34 ? "w-1/3" : "w-1/6"}`}
+          />
         </View>
 
         <Text className="mb-1 text-xs font-semibold uppercase tracking-wide text-zmen-muted">
@@ -101,7 +115,8 @@ export default function FormSelectionScreen({ navigation }) {
             {isAiAssistEnabled ? (
               <View className="rounded-2xl border border-zmen-secondary/40 bg-zmen-secondary/10 p-3">
                 <Text className="text-xs font-semibold text-zmen-primary">
-                  AI suggestion: add onset timing and symptom intensity for better scoring.
+                  AI suggestion: add onset timing and symptom intensity for
+                  better scoring.
                 </Text>
               </View>
             ) : null}

@@ -6,7 +6,9 @@ export default function Card({ children, elevated = false, className = "" }) {
   return (
     <View
       className={cn(
-        elevated ? COMPONENT_VARIANTS.card.elevated : COMPONENT_VARIANTS.card.base,
+        elevated
+          ? COMPONENT_VARIANTS.card.elevated
+          : COMPONENT_VARIANTS.card.base,
         className,
       )}
     >
